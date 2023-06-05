@@ -1,11 +1,11 @@
 import java.util.Locale;
-
 /*
 Створити програму для обробки символьних рядків:
     - Створити зміну типу String
     - Показати цю зміну у верхньому та нижньому регістрах
     - Показати першу та останню літери
  */
+
 public class LessonFour {
     public static void main(String[] args) {
         String name = "Roman";
