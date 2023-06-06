@@ -112,6 +112,7 @@ public class LessonFive {
         } else if (age >= 51 && age < 100){
             caseAge = 4;
         }
+        // визначаємо категорію з отриманого діапазону
         switch (caseAge) {
             case 1 -> System.out.println("Ваш вік: " + age + " - Категорія: Діти.");
             case 2 -> System.out.println("Ваш вік: " + age + " - Категорія: Підлітки.");
