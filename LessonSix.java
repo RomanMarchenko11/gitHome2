@@ -11,6 +11,7 @@ public class LessonSix {
         System.out.println("3. Виводимо таблицю множення для цілого числа від 0 до 9.");
         System.out.println("4. Виводимо потенцію числа (число в степені).");
         System.out.println("5. Виводимо факторіал цілого числа.");
+        System.out.println("6. Виводимо прямокутник з зірочок.");
         System.out.print("Ваш вибір: ");
         chuslo = sc.nextInt();
 
@@ -42,7 +43,14 @@ public class LessonSix {
                 chuslo = sc.nextInt();
                 factorial(chuslo);
             }
-            default -> System.out.println("Завершено. Наступного разу виберіть від 1 до 5!");
+            case 6 -> {
+                System.out.println("Введіть ширину прямокутника (кількість зірочок): ");
+                chuslo = sc.nextInt();
+                System.out.println("Введіть висоту прямокутника (кількість зірочок): ");
+                potencia = sc.nextInt();
+                pryamokytnuk(chuslo, potencia);
+            }
+            default -> System.out.println("Завершено. Наступного разу виберіть від 1 до 6!");
         }
     }
     public static void parni (int number) {
@@ -101,5 +109,32 @@ public class LessonSix {
             number --;
         } while(number > 0);
         System.out.print(" = " + factor);
+    }
+
+    public static void pryamokytnuk (int i, int j) {
+        if (i > 0 && j > 0) {
+            for (int m = i + 2 ; m > 0; m--) {
+                System.out.print(" - ");
+            }
+            System.out.println();
+            for (int n = j; n > 0; n--) {
+                System.out.print(" | ");
+                for (int k=i ; k > 0; k--) {
+                    System.out.print(" * ");
+                }
+                System.out.println(" | ");
+                if ( n == (j + 2) / 2)   {
+                    for (int m = i + 2 ; m > 0; m--) {
+                        System.out.print(" + ");
+                    }
+                    System.out.println();
+                }
+            }
+        } else {
+            System.out.println("Значення ширини та висоти прямокутника мають бути більше нуля");
+        }
+        for (int m = i + 2; m > 0; m--){
+            System.out.print(" - ");
+        }
     }
 }
