@@ -4,7 +4,7 @@ public class LessonSeven {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Виберіть одну з наступних задач:");
-        System.out.println("1-класна робота: калькулятор 2-класна робота:");
+        System.out.println("1-класна робота: калькулятор 2-класна робота: Пуста фраза");
         System.out.println("3-домашнє завдання: куб заданого числа; виведення зірочок, що дорівнює заданому числу");
         System.out.println("4-домашнє завдання: вивести заданий символ задану кількість разів");
         int operation = scanner.nextInt();
@@ -71,11 +71,31 @@ public class LessonSeven {
         return a * b;
     }
     private static int division(int a, int b) {
-        return a / b;
+        if (b == 0 ) {
+            System.out.println("Error: ділення на нуль.");
+            return 0;
+        } else {
+            return a / b;
+        }
     }
 
     private static void task2 () {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введіть фразу: ");
+        StringBuilder phrase = new StringBuilder(scanner.nextLine());
+//        System.out.println(phrase); //Check
+        recursionPhraseEmpty(phrase);
+        System.out.println("Вибачте, сталася помилка!");
+    }
 
+    private static void recursionPhraseEmpty (StringBuilder phrase) {
+        if (!phrase.isEmpty()) {
+            phrase.deleteCharAt(phrase.length()-1);
+            System.out.println(phrase);
+            recursionPhraseEmpty(phrase);
+        } else {
+            System.out.println("Ваша фраза: ?");
+        }
     }
     private static void task3 (){
 //        Створити метод який повертає куб заданого числа
