@@ -10,12 +10,12 @@ public class LessonEight {
         System.out.print("Завдання: \n 1-практичні (на уроці) \n 2-домашні \nВаш вибір: ");
         int choose = scanner.nextInt();
         switch (choose) {
-            case 1 -> lessonTask(random);
+            case 1 -> lessonTask(random, scanner);
             case 2 -> homeTask(random);
             default -> System.out.println("Невірне значення!");
         }
     }
-    public static void lessonTask (Random random) {
+    public static void lessonTask (Random random, Scanner scanner) {
 
         int [] intArray = new int[5]; //5 елементів одномірного масиву
         int [] intArray2 = {1,3,5}; //3 елементу одномірного масиву
@@ -36,14 +36,15 @@ public class LessonEight {
             System.out.println("");
         }
         System.out.println("-------------------------------");
-
-//        Створіть масив цілих чисел та обчисліть суму всіх чисел в масиві.
-//        Завдання: Знайдіть мінімальне та максимальне число в масиві.
+        System.out.println("\n\n\nПрактика - виконуємо та розбираємо!");
+//        1) Створіть масив цілих чисел та обчисліть суму всіх чисел в масиві.
+//        2) Завдання: Знайдіть мінімальне та максимальне число в масиві.
         int [] numbers = new int[5];
         int sum = 0;
         int min = 10;
         int max = 0;
-        for (int i=0; i<5; i++) {
+        System.out.println("Створюємо масив: ");
+        for (int i=0; i<numbers.length; i++) {
             numbers [i] = random.nextInt(10);
             System.out.print(numbers[i] + " ");
             sum += numbers[i];
@@ -56,7 +57,33 @@ public class LessonEight {
         }
         System.out.println("\nCума чисел в масиві: " + sum);
         System.out.println("Максимальне: " + max + " \nМінімальне: " + min);
-// зреверсуйте
+//            3) Зреверсуйте масив без використання додаткового масиву.
+        int x = 0;
+        for (int i = 0; i < numbers.length/2; i++) {
+                x = numbers[i];
+                numbers[i] = numbers[numbers.length - 1 - i] ;
+                numbers[numbers.length - 1 - i] = x;
+        }
+        System.out.println("-------------------------------");
+        System.out.println("Реверсивний масив виглядає так:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+        System.out.println("\n-------------------------------");
+//            4) Завдання: Перевірте, чи містить масив певне число
+        System.out.print("Чи містить масив число? Загадайте число від 0 до 10: ");
+        int numberFind = scanner.nextInt();
+        int count = 0;
+        for (int k = 0; k < numbers.length; k++) {
+            if (numberFind == numbers[k]) {
+                count++;
+            }
+        }
+        System.out.println("\nМасив містить число " + numberFind + ": " + count +" шт.");
+        System.out.println("-------------------------------");
+//            5) Завдання: Знайдіть середнє значення елементів масиву.
+        System.out.println("Cереднє значення елементів: " + sum/numbers.length);
+        System.out.println("-------------------------------");
     }
 
     public static void homeTask (Random random) {
