@@ -23,15 +23,15 @@ public class LessonNine {
         int[][] matrix2 = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
         int[][] matrix3 = new int[3][3];
         System.out.println("Задані матриці:");
-        System.out.println(Arrays.deepToString((matrix1)));
-        System.out.println(Arrays.deepToString((matrix2)));
+        System.out.println(Arrays.deepToString(matrix1));
+        System.out.println(Arrays.deepToString(matrix2));
         System.out.println("Сума заданих матриць:");
         for (int i = 0; i < matrix1.length; i++) {
             for (int j = 0; j < matrix1[i].length; j++) {
                     matrix3 [i][j] = matrix1[i][j]+matrix2[i][j];
             }
         }
-        System.out.println(Arrays.deepToString((matrix3)));
+        System.out.println(Arrays.deepToString(matrix3));
     }
 
     private static void matrix(Scanner scanner) {

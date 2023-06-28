@@ -22,6 +22,8 @@ public class Teacher {
     public void setAge(int age) {
         if (age > 20 && age <60) {
             this.age = age;
+        } else {
+            System.out.println("Необхідно призначити нового вчителя.");
         }
     }
 }
