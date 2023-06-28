@@ -1,5 +1,4 @@
 import javax.xml.namespace.QName;
-
 public class Teacher {
 //    1. Створити клас для опису викладача
     private String name;

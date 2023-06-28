@@ -18,6 +18,5 @@ public class LessonTen {
         ryslan.setName("");
         ryslan.setNumStudentTicket("R342");
         ryslan.setAverageMark(110);
-
     }
 }

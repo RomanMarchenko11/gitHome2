@@ -1,7 +1,6 @@
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-
 public class LessonTenMatrix {
     /* 2. Створити клас для роботи с масивом чисел. Він повинен вміти:
 //- створювати масив з випадковими числами с заданим розміром
