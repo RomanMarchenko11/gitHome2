@@ -2,17 +2,14 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 public class LessonTenMatrix {
-    /* 2. Створити клас для роботи с масивом чисел. Він повинен вміти:
+//    2. Створити клас для роботи с масивом чисел. Він повинен вміти:
 //- створювати масив з випадковими числами с заданим розміром
 //- сортувати масив у дві сторони
 //- вивести на консоль масив
-     */
     public static void main(String[] args) {
-//        створювати масив з випадковими числами с заданим розміром
-//        вивести на консоль масив
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        System.out.print("Задайте розмір масиву (від 0 до 20): ");
+        System.out.print ("Задайте розмір масиву (від 0 до 20): ");
         int z = scanner.nextInt();
         if (0 < z && z < 20) {
             int[] matrixZ = new int[z];

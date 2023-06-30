@@ -1,11 +1,10 @@
 public class LessonTen {
+    /*
+   - Створити клас, який описує студента(з ім'ям / призвіщем / віком)
+   - та клас для опису викладача (з ім'ям / призвіщем / віком / студентом (ваш клас) до нього додоти гетери / сетери,
+   - створити об'єкти в вашому мейн методі
+   */
     public static void main(String[] args) {
-//        Визначаємо викладача
-        Teacher teacher = new Teacher();
-        teacher.setName("Олег Степанович");
-        teacher.setSubject("Хімія");
-        teacher.setAge(45);
-        System.out.println("Предмет: " + teacher.getSubject() + ". Викладач: " + teacher.getName() + ", " + teacher.getAge() +  " років.\n");
 //        Визначаємо студентів
         Student valiko = new Student();
         valiko.setName("Валентин");
@@ -45,5 +44,15 @@ public class LessonTen {
             System.out.print(", № квитка: " + groupOfStudents[i].getNumStudentTicket());
             System.out.print(", Середня річна оцінка: " + groupOfStudents[i].getAverageMark()+";\n");
         }
+        //        Визначаємо викладача
+        System.out.println("--------------------------------------");
+        Teacher teacher = new Teacher();
+        teacher.setName("Олег Степанович");
+        teacher.setSurname("Хімія");
+        teacher.setAge(45);
+        teacher.setStudent(valiko);
+        System.out.println("Предмет: " + teacher.getSurname() + ". Викладач: " + teacher.getName() + ", " + teacher.getAge() +  " років.");
+        System.out.println("Підпорядкований студент: " + teacher.getStudent().getName());
+        System.out.println("--------------------------------------");
     }
 }
