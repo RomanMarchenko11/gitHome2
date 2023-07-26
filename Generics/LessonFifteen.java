@@ -3,13 +3,7 @@ package Generics;
 import java.util.Arrays;
 
 public class LessonFifteen<EA> {
-    /*
-Завдання: Параметризований клас Pair
-Створіть параметризований клас Pair, який приймає два параметри типу.
-Клас повинен мати методи getFirst() та getSecond(), які повертають перший та другий елементи відповідно.
-Протестуйте клас Pair, створюючи об'єкти з різними типами даних (наприклад, цілі числа, рядки, об'єкти) та
-отримуючи їх значення.
- */
+
     public static void main(String[] args) {
         System.out.println("Home Task");
         Animal[] animals = {new Dog(10305, 5),new Cat("Vaska", 3.5), new Parrot("Kesha", 3)};
@@ -84,7 +78,13 @@ public class LessonFifteen<EA> {
         System.out.println("Викликаємо метод з завдання 2");
 //        GenericMax.max(intArray);
 
-
+        System.out.println("Створюємо об'єкти Pair з завдання 3");
+        Pair<Integer, String> pair = new Pair(25, "Second");
+        Pair<String, Integer> pair2 = new Pair("First", 55);
+        Pair<Integer, Integer> pair3 = new Pair<>(25, 55);
+        System.out.println(pair);
+        System.out.println(pair2);
+        System.out.println(pair3);
     }
 
     private static <EA> void printArray(EA[] array) {
