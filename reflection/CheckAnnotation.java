@@ -39,24 +39,6 @@ public class CheckAnnotation {
         );
     }
 
-    /*
-        private void validateAge(Object object) {
-            Class<?> clazz = object.getClass();
-            Arrays.stream(clazz.getDeclaredFields()).forEach(
-                    field -> {
-                        field.setAccessible(true);
-                        if (field.isAnnotationPresent(CheckForAge.class) && field.getAnnotation(CheckForAge.class).validate()) {
-                            try {
-                                int age = (Integer) field.get(object);
-                                validateHumanAge(age, field);
-                            } catch (IllegalAccessException e) {
-                                throw new RuntimeException(e);
-                            }
-                        }
-                    }
-            );
-        }
-     */
     private void validateClientReadBooks(boolean readBooks, Field field) {
         if (!readBooks) {
             throw new CheckReadException("Client has not yet read book!" + field.getDeclaringClass().getTypeName());
