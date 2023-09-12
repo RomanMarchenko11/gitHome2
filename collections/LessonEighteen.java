@@ -1,9 +1,20 @@
 package collections;
 
 import java.util.*;
-
+import java.util.Iterator;
 public class LessonEighteen {
     public static void main(String[] args) {
+        Set<String> set = new HashSet<>();
+        set.add("One");
+        set.add("Two");
+        set.add("Three");
+        set.remove(1);
+        set.forEach(System.out::println);
+/*
+те саме що for (String element : set) { System.out.println(element); }
+ */
+//        Iterator<String> iterator = set.Iterator(); //get an iterator
+
 
         HashSet<String> hashSet = new HashSet<>();
         hashSet.add("Apple");
@@ -27,6 +38,7 @@ public class LessonEighteen {
 //        1. У циклі на 1000 повтореннь сгенерувати випадкові числі діапазоном
 //              від 1 до 50 за зберегти їх у різні типи колекцій сет
 //        2. Вивести всі 3 варіанти на консоль
+
         System.out.println("Home Work - Loops and Sets");
         System.out.println("-----------------------------------");
         Random random = new Random();

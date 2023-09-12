@@ -1,6 +1,6 @@
 package patterns.singletone;
 
-public class Singleton {
+public final class Singleton {
     private Singleton() {
 
     }
