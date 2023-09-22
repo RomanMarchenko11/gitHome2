@@ -2,7 +2,8 @@ package Files;
 
 import java.io.*;
 
-public class SaveString {
+public class
+SaveString {
     /*
     Створити класс з 2 функціями.
     Перша зберігає отриману строку у файл.
